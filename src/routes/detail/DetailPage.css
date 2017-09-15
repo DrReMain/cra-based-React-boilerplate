@@ -1,0 +1,61 @@
+.App {
+
+}
+
+.title {
+    margin: 0;
+    text-align: center;
+    background: #3aa0d4;
+    color: #fff;
+}
+
+.desc {
+    padding: 5px 0;
+    height: 60px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    border-bottom: 1px solid #3aa0d4;
+}
+
+.desc img,
+.desc span {
+    margin: 0 50px;
+    flex: 0 1 auto;
+}
+
+.desc img,
+.desc2 img {
+    height: 100%;
+}
+
+.desc2 img,
+.desc2 span {
+    margin: 0 5px;
+}
+
+.article {
+    padding: 20px;
+}
+
+.article img {
+    width: 100%;
+}
+
+.comments {
+    background: #3ca3d8;
+    color: #fff;
+}
+
+.desc2 {
+    padding: 5px 0;
+    height: 60px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-bottom: 1px solid #fff;
+}
+
+.comment {
+    padding: 10px;
+}

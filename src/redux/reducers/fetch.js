@@ -23,9 +23,20 @@ export default function counter(state = initialState, action) {
           data: '请求失败'
         }
       }
-
     case 'CLEAN':
       return initialState
+    case 'DETAIL':
+      if (action.payload.success) {
+        return {
+          ...state,
+          detail: action.payload.data
+        }
+      } else {
+        return {
+          ...state,
+          detail: '请求失败'
+        }
+      }
     default:
       return state
   }

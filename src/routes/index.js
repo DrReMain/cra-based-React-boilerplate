@@ -8,6 +8,7 @@ import NotFoundPage from './404/NotFoundPage'
 import CounterPage from './counter/CounterPage'
 import FetchPage from './fetch/FetchPage'
 import ListPage from './list/ListPage'
+import DetailPage from './detail/DetailPage'
 
 
 const history = syncHistoryWithStore(browserHistory, store);
@@ -18,6 +19,7 @@ export default (
     <Route path="/counter" component={CounterPage}/>
     <Route path="/fetch" component={FetchPage}/>
     <Route path="/list" component={ListPage}/>
+    <Route path="/list/:id" component={DetailPage}/>
     <Route path="*" component={NotFoundPage}/>
   </Router>
 )

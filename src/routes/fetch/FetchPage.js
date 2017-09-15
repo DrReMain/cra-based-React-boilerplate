@@ -6,10 +6,6 @@ import style from './FetchPage.css'
 
 class FetchPage extends Component {
 
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     const { data, dispatch } = this.props;
     let content;

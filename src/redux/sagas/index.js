@@ -3,5 +3,6 @@ export default function* rootSaga() {
     require('./counter').helloSaga(),
     require('./counter').watchIncrementAsync(),
     require('./fetch').fetchAsync(),
+    require('./fetch').fetchDetail(),
   ]
 }
