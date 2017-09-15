@@ -1,0 +1,28 @@
+.value {
+    text-align: center;
+    margin: 0;
+    padding: 50px;
+    background: #c8dbff;
+    color: #fff;
+    font-size: 64px;
+}
+
+.btns {
+    text-align: center;
+}
+
+.btns button {
+    margin: 0 10px;
+    background: #46c1ff;
+    border: none;
+    color: #fff;
+    padding: 5px 20px;
+    cursor: pointer;
+    outline: none;
+    transition: all .2s;
+}
+
+.btns button:hover {
+    background: #3ca3d8;
+    box-shadow: 1px 1px 5px #ccc;
+}

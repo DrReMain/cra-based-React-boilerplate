@@ -2,12 +2,20 @@ import React from 'react'
 
 import { Link } from 'react-router'
 
-import './NavBar.css'
+import classNames from 'classnames'
+import './NavBar.less'
 
 export default class NavBar extends React.Component {
+
   render() {
+    const { prefixCls = 'R', className } = this.props;
+    const classs = classNames(className, {
+      [`${prefixCls}-NavBar`]: true
+    });
+
+
     return (
-      <nav className="navbar">
+      <nav className={classs}>
         <ul>
           <li><Link activeClassName="active" to="/">Home</Link></li>
           <li><Link activeClassName="active" to="/counter">Counter</Link></li>
