@@ -1,3 +1,4 @@
+import registerServiceWorker from './registerServiceWorker';
 import React from 'react';
 import { render } from 'react-dom';
 import AppRouter from './routes'
@@ -19,4 +20,6 @@ let renderFunc = () => {
 };
 
 if (process.env.NODE_ENV !== 'test') renderFunc();
+
+registerServiceWorker();
 

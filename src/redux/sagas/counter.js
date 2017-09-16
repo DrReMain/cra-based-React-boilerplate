@@ -1,10 +1,6 @@
 import { delay } from 'redux-saga'
 import { call, put, takeEvery } from 'redux-saga/effects'
 
-export function* helloSaga() {
-  yield console.log('Hello world!');
-}
-
 export function* incrementAsync(action) {
   alert(action.payload);
   yield call(delay, 1000);
