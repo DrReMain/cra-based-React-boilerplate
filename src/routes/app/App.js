@@ -8,15 +8,19 @@ class App extends Component {
     return (
       <div className={style.App}>
         <NavBar/>
-        <main>
-          <div className={style.AppHeader}>
-            <img src={logo} className={style.AppLogo} alt="logo"/>
-            <h2>Welcome to React</h2>
-          </div>
-          <p className={style.AppIntro}>
-            To get started, edit <code>src/App.js</code> and save to reload.
-          </p>
-        </main>
+        {
+          this.props.children
+            ? this.props.children
+            : (<main className={style.main}>
+              <div className={style.AppHeader}>
+                <img src={logo} className={style.AppLogo} alt="logo"/>
+                <h2>Welcome to React</h2>
+              </div>
+              <p className={style.AppIntro}>
+                To get started, edit <code>src/App.js</code> and save to reload.
+              </p>
+            </main>)
+        }
       </div>
     );
   }

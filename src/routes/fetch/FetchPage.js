@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
-import NavBar from '../../components/NavBar'
 
 import style from './FetchPage.css'
 
@@ -26,18 +25,15 @@ class FetchPage extends Component {
     }
 
     return (
-      <div className="App">
-        <NavBar/>
-        <main>
-          <div className={style.fetch} onClick={() => dispatch({ type: 'FETCH_ASYNC' })}>FETCH</div>
-          <div className={style.clean} onClick={() => dispatch({ type: 'CLEAN' })}>CLEAN</div>
-          <div className={style.fetch} onClick={() => this.props.router.push('/list')}>LIST</div>
+      <main>
+        <div className={style.fetch} onClick={() => dispatch({ type: 'FETCH_ASYNC' })}>FETCH</div>
+        <div className={style.clean} onClick={() => dispatch({ type: 'CLEAN' })}>CLEAN</div>
+        <div className={style.fetch} onClick={() => this.props.router.push('/list')}>LIST</div>
 
-          <article className={style.article}>
-            {content}
-          </article>
-        </main>
-      </div>
+        <article className={style.article}>
+          {content}
+        </article>
+      </main>
     );
   }
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from 'react-dom';
-import router from './routes'
+import AppRouter from './routes'
 import { Provider } from 'react-redux'
 import store from './redux/store'
 import './styles/main.less';
@@ -12,7 +12,7 @@ const MOUNT_NODE = document.getElementById('root');
 let renderFunc = () => {
   render(
     <Provider store={store}>
-      {router}
+      <AppRouter/>
     </Provider>,
     MOUNT_NODE
   );

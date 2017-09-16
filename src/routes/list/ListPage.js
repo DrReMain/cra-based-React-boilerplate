@@ -3,8 +3,6 @@ import { Link } from 'react-router'
 import { connect } from 'react-redux'
 import style from './ListPage.css'
 
-import NavBar from '../../components/NavBar'
-
 class ListPage extends Component {
 
   componentWillMount() {
@@ -15,15 +13,17 @@ class ListPage extends Component {
 
     const { data } = this.props;
     const lists = data.data || [];
+
+    if (this.props.children) {
+      return this.props.children
+    }
+
     return (
-      <div className={style.App}>
-        <NavBar/>
-        <main>
-          <ol className={style.ol}>
-            {lists.map(item => <li key={item.id}><Link to={`list/${item.id}`}>{item.title}</Link></li>)}
-          </ol>
-        </main>
-      </div>
+      <main>
+        <ol className={style.ol}>
+          {lists.map(item => <li key={item.id}><Link to={`list/${item.id}`}>{item.title}</Link></li>)}
+        </ol>
+      </main>
     );
   }
 }
